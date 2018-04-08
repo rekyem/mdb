@@ -1,0 +1,73 @@
+<!-- A CardView that contains a TextView -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="3dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/movie_padding"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/movie_poster_width"
+            android:layout_height="@dimen/movie_poster_height"
+            android:layout_marginRight="@dimen/movie_poster_margin">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorName="BallClipRotateIndicator"
+                app:indicatorColor="@android:color/darker_gray"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/iv_poster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                 />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:layout_marginTop="@dimen/title_top_margin"
+                android:layout_marginBottom="@dimen/title_bot_margin"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_release_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/year_top_margin"
+                android:layout_marginBottom="@dimen/year_bot_margin"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="match_parent"
+                android:textColor="@color/gray"
+                android:layout_marginTop="@dimen/over_top_margin"
+                android:layout_marginBottom="@dimen/over_bot_margin"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

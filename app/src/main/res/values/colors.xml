@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#363636</color>
+    <color name="colorPrimaryDark">#242424</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="netflixBackground">#141414</color>
+    <color name="gray">#363636</color>
+
 </resources>

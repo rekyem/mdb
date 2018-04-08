@@ -1,0 +1,17 @@
+<resources>
+
+    <dimen name="movie_poster_width">100dp</dimen>
+    <dimen name="movie_poster_height">150dp</dimen>
+    <dimen name="movie_padding">15dp</dimen>
+    <dimen name="movie_poster_margin">10dp</dimen>
+
+    <dimen name="title_top_margin">0dp</dimen>
+    <dimen name="title_bot_margin">5dp</dimen>
+
+    <dimen name="year_top_margin">0dp</dimen>
+    <dimen name="year_bot_margin">8dp</dimen>
+
+    <dimen name="over_top_margin">0dp</dimen>
+    <dimen name="over_bot_margin">0dp</dimen>
+
+</resources>

@@ -2,9 +2,9 @@ package themoviedb.privalia.network;
 
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 import rx.Observable;
+import themoviedb.privalia.models.MoviePageModel;
 
 /**
  * Created by Arturo on 08/04/2018.
@@ -12,11 +12,17 @@ import rx.Observable;
 
 public interface  MdbEndpointInterface {
 
-    String MdbGet = "4/list/{page}";
     String MdbHeader = "Content-Type: application/json;charset=utf-8";
 
-    @GET(MdbGet)
     @Headers({MdbHeader})
-    Observable<MdbResponse> getMoviesList(@Path("page") int page, @Query("api_key") String apiKey, @Query("sort_by") String sortBy);
+    @GET("movie/popular")
+    Observable<MoviePageModel> getPopularMoviesList(@Query("page") Integer page, @Query("api_key") String apiKey);
+
+    @Headers({MdbHeader})
+    @GET("search/movie")
+    Observable<MoviePageModel> searchMovies(@Query("page") Integer page,@Query("query") String query, @Query("api_key") String apiKey);
+
+
+
 
 }

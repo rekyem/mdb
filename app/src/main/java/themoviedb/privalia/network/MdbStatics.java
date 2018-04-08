@@ -5,10 +5,8 @@ package themoviedb.privalia.network;
  */
 
 public class MdbStatics {
-    public final static String BASE_URL = "https://api.themoviedb.org/";
-    public final static String IMAGE_URL = "https://image.tmdb.org/t/p/w300";
+    public final static String BASE_URL = "https://api.themoviedb.org/3/";
     public final static String API_KEY = "93aea0c77bc168d8bbce3918cefefa45";
-    public final static String SORT_BY = "popularity.desc";
-
+    public final static String IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 
 }

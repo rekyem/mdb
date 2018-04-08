@@ -19,9 +19,6 @@ public class ApplicationMdb extends Application {
         basicComp = DaggerBasicComp.builder()
                 .applicationMdbModule(new ApplicationMdbModule(getApplicationContext()))
                 .build();
-
-
-
     }
 
     public static ApplicationMdb app() {
