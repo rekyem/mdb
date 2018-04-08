@@ -12,13 +12,11 @@ import rx.Observable;
 
 public interface  MdbEndpointInterface {
 
-    final String MdbGet = "4/list/{page}";
-    final String MdbHeader = "Content-Type: application/json;charset=utf-8";
+    String MdbGet = "4/list/{page}";
+    String MdbHeader = "Content-Type: application/json;charset=utf-8";
 
     @GET(MdbGet)
     @Headers({MdbHeader})
-    Observable<MdbResponse> getMostPopularMoviesList(@Path("page") int page, @Query("api_key") String apiKey, @Query("sort_by") String sortBy);
-
-    //Call<ListHeader> getMostPopularMoviesList(@Path("page") int page, @Query("api_key") String apiKey, @Query("sort_by") String sortBy);
+    Observable<MdbResponse> getMoviesList(@Path("page") int page, @Query("api_key") String apiKey, @Query("sort_by") String sortBy);
 
 }
